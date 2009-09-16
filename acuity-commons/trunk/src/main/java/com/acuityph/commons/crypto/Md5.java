@@ -21,7 +21,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.charset.Charset;
+import java.io.UnsupportedEncodingException;
 import java.security.GeneralSecurityException;
 import java.security.MessageDigest;
 
@@ -40,9 +40,9 @@ public final class Md5 {
     public static final String MD5 = "MD5";
 
     /**
-     * The UTF-8 character set.
+     * The UTF-8 character set name.
      */
-    public static final Charset UTF8 = Charset.forName("UTF-8");
+    public static final String UTF_8 = "UTF-8";
 
     /**
      * Use an 8KB buffer.
@@ -76,7 +76,11 @@ public final class Md5 {
      *         on exception
      */
     public static byte[] hash(final String s) throws GeneralSecurityException {
-        return hash(s.getBytes(UTF8));
+        try {
+            return hash(s.getBytes(UTF_8));
+        } catch (final UnsupportedEncodingException e) {
+            throw new RuntimeException(e.getMessage(), e);
+        }
     }
 
     /**

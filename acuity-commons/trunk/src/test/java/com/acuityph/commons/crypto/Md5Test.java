@@ -21,6 +21,7 @@ import static junit.framework.Assert.assertEquals;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 
 import org.junit.Test;
@@ -38,7 +39,14 @@ public final class Md5Test {
     private static final String TEXT =
             "All your base are belong to us. The quick brown fox jumps over the lazy dog.";
 
-    private static final byte[] BYTES = TEXT.getBytes(Md5.UTF8);
+    private static final byte[] BYTES;
+    static {
+        try {
+            BYTES = TEXT.getBytes(Md5.UTF_8);
+        } catch (final UnsupportedEncodingException e) {
+            throw new RuntimeException(e.getMessage(), e);
+        }
+    }
 
     private static final String EXPECTED_HASH = "efc0fb0569088c78b727f110f8444929";
 

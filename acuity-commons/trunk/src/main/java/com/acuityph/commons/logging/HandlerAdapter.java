@@ -54,7 +54,7 @@ public abstract class HandlerAdapter extends Handler {
      * @see java.util.logging.Handler#publish(java.util.logging.LogRecord)
      */
     @Override
-    public void publish(@SuppressWarnings("unused") final LogRecord logRecord) {
+    public void publish(final LogRecord logRecord) {
         // noop
     }
 

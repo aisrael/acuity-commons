@@ -432,7 +432,7 @@ public final class StringUtility {
      * @return true if the given string is null or 0-length (<code>""</code>)
      */
     public static boolean isNullOrEmpty(final String s) {
-        return null == s || s.isEmpty();
+        return null == s || s.length() == 0;
     }
 
     /**
