@@ -75,16 +75,6 @@
   </dependencies>
 
   <repositories>
-    <repository>
-      <id>acuity-playground-releases</id>
-      <url>https://acuity.devguard.com/svn/playground/maven2/releases</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
     <!-- The Java.net Maven 2 repo, where we get wagon-svn  -->
     <repository>
       <id>java.net2</id>
