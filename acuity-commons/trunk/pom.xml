@@ -1,12 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.acuityph</groupId>
   <artifactId>acuity-commons</artifactId>
   <packaging>jar</packaging>
   <name>Acuity Commons Library</name>
-  <version>0.5-SNAPSHOT</version>
+  <version>0.5</version>
 
   <url>http://www.acuityph.com</url>
 
@@ -19,9 +18,9 @@
 
   <!-- SVN Configuration -->
   <scm>
-    <connection>scm:svn:http://acuity-commons.googlecode.com/svn/acuity-commons/trunk</connection>
-    <developerConnection>scm:svn:https://acuity-commons.googlecode.com/svn/acuity-commons/trunk</developerConnection>
-    <url>http://code.google.com/p/acuity-commons/source/browse/acuity-commons/trunk</url>
+    <connection>scm:svn:http://acuity-commons.googlecode.com/svn/acuity-commons/tags/acuity-commons-0.5</connection>
+    <developerConnection>scm:svn:https://acuity-commons.googlecode.com/svn/acuity-commons/tags/acuity-commons-0.5</developerConnection>
+    <url>http://code.google.com/p/acuity-commons/source/browse/acuity-commons/tags/acuity-commons-0.5</url>
   </scm>
 
   <properties>
