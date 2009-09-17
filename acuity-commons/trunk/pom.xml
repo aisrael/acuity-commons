@@ -10,9 +10,18 @@
 
   <url>http://www.acuityph.com</url>
 
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>LICENSE.txt</url>
+    </license>
+  </licenses>
+
   <!-- SVN Configuration -->
   <scm>
-    <developerConnection>scm:svn:https://acuity.devguard.com/svn/playground/labs/acuity-commons/trunk</developerConnection>
+    <connection>scm:svn:http://acuity-commons.googlecode.com/svn/acuity-commons/trunk</connection>
+    <developerConnection>scm:svn:https://acuity-commons.googlecode.com/svn/acuity-commons/trunk</developerConnection>
+    <url>http://code.google.com/p/acuity-commons/source/browse/acuity-commons/trunk</url>
   </scm>
 
   <properties>
@@ -76,6 +85,7 @@
         <enabled>false</enabled>
       </snapshots>
     </repository>
+    <!-- The Java.net Maven 2 repo, where we get wagon-svn  -->
     <repository>
       <id>java.net2</id>
       <name>Java.net Maven2 Repository</name>
@@ -84,14 +94,15 @@
   </repositories>
 
   <build>
+
     <plugins>
-      <!-- Set Maven to compile for Java 6 -->
+      <!-- Set Maven to compile for Java 5 -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
+          <source>1.5</source>
+          <target>1.5</target>
         </configuration>
       </plugin>
 
@@ -138,7 +149,7 @@
     </plugins>
 
     <extensions>
-      <!-- SVN Wagon Provider (Java.net) -->
+      <!-- SVN Wagon Provider (Java.net), needed to deploy to SVN -->
       <extension>
         <groupId>org.jvnet.wagon-svn</groupId>
         <artifactId>wagon-svn</artifactId>
@@ -148,12 +159,27 @@
 
   </build>
 
+  <reporting>
+    <plugins>
+      <!-- Generate Javadocs as part of project reports -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <configuration>
+          <links>
+            <link>http://java.sun.com/j2se/1.5.0/docs/api/</link>
+          </links>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
+
   <profiles>
     <profile>
       <id>release</id>
       <!--
-        Configure the source plugin to install the source along with the
-        project artifact
+        Configure the Maven source plugin to install the source along with the project artifact. See
+        http://maven.apache.org/plugins/maven-source-plugin/usage.html
       -->
       <build>
         <plugins>
@@ -174,27 +200,31 @@
     </profile>
   </profiles>
 
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.5</version>
-      </plugin>
-    </plugins>
-  </reporting>
+  <developers>
+    <developer>
+      <id>aisrael</id>
+      <name>Alistair A. Israel</name>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <email>aisrael@gmail.com</email>
+    </developer>
+    <developer>
+      <id>tiongks</id>
+      <name>Eric P. Tiongson</name>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <email>tiongks@gmail.com</email>
+    </developer>
+  </developers>
 
   <distributionManagement>
     <repository>
       <uniqueVersion>false</uniqueVersion>
-      <id>acuity-playground-releases</id>
-      <url>svn:https://acuity.devguard.com/svn/playground/maven2/releases/</url>
+      <id>acuity-commons-releases</id>
+      <url>svn:https://acuity-commons.googlecode.com/svn/maven2/releases/</url>
     </repository>
-    <snapshotRepository>
-      <uniqueVersion>true</uniqueVersion>
-      <id>acuity-playground-snapshots</id>
-      <url>svn:https://acuity.devguard.com/svn/playground/maven2/snapshots/</url>
-    </snapshotRepository>
   </distributionManagement>
 
 </project>
