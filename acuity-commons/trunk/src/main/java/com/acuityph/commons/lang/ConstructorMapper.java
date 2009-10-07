@@ -100,7 +100,7 @@ public class ConstructorMapper<S, T> extends Mapper.Base<S, T> {
                 final Constructor<T> constructor = targetClass.getConstructor(types);
                 return new ConstructorMapper<S, T>(targetClass, constructor, types, names);
             } catch (final Exception e) {
-                throw new RuntimeException(e.getMessage(), e);
+                throw new ConstructionException(e.getMessage(), e);
             }
         }
 
@@ -178,8 +178,47 @@ public class ConstructorMapper<S, T> extends Mapper.Base<S, T> {
         try {
             return constructor.newInstance(args);
         } catch (final Exception e) {
-            throw new RuntimeException(e.getMessage(), e);
+            throw new ConstructionException(e.getMessage(), e);
         }
+    }
+
+    /**
+     *
+     * @author Alistair A. Israel
+     */
+    public static class ConstructionException extends RuntimeException {
+
+        /**
+         *
+         */
+        private static final long serialVersionUID = 5641199308770871122L;
+
+        /**
+         * @param msg
+         *        Exception message
+         * @param t
+         *        Throwable cause
+         */
+        public ConstructionException(final String msg, final Throwable t) {
+            super(msg, t);
+        }
+
+        /**
+         * @param msg
+         *        Exception message
+         */
+        public ConstructionException(final String msg) {
+            super(msg);
+        }
+
+        /**
+         * @param t
+         *        Throwable cause
+         */
+        public ConstructionException(final Throwable t) {
+            super(t);
+        }
+
     }
 
 }
