@@ -56,9 +56,12 @@ public final class SystemUtils {
 
     /**
      * @return {@link #OS_NAME}.startsWith("Windows")
+     * @deprecated
+     * @see Platform#isWindows()
      */
+    @Deprecated
     public static boolean isOsWindows() {
-        return OS_NAME.startsWith("Windows");
+        return Platform.isWindows();
     }
 
     /**
