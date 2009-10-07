@@ -42,7 +42,11 @@ public class CsvReader {
      */
     public CsvReader(final Reader in, final boolean trimSpaces) {
         super();
-        this.in = new BufferedReader(in);
+        if (in instanceof BufferedReader) {
+            this.in = (BufferedReader) in;
+        } else {
+            this.in = new BufferedReader(in);
+        }
         this.trimSpaces = trimSpaces;
     }
 
