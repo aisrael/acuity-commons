@@ -17,10 +17,10 @@
  */
 package com.acuityph.commons.jpa;
 
-import static com.acuityph.commons.util.StringUtility.decapitalize;
 import static java.text.MessageFormat.format;
 
 import java.lang.reflect.Field;
+import java.util.Locale;
 
 import javax.persistence.Id;
 
@@ -58,7 +58,7 @@ public final class JpaUtils {
      */
     public static String constructSelectAllQuery(final String entityName) {
         Assert.hasText(entityName, "Invalid entity name \"" + entityName + "\"!");
-        return format(SELECT_ALL_FORMAT, entityName, decapitalize(entityName));
+        return format(SELECT_ALL_FORMAT, entityName, entityName.toLowerCase(Locale.ENGLISH));
     }
 
     /**

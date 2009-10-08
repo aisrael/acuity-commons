@@ -17,6 +17,7 @@
  */
 package com.acuityph.commons.util;
 
+import java.beans.Introspector;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Hashtable;
@@ -177,15 +178,16 @@ public final class StringUtility {
     }
 
     /**
-     * Decapitalize the given string by converting its first character to lower
-     * case.
+     * Merely a delegate to {@link Introspector#decapitalize(String)} (retained
+     * for backwards compatibility).
      *
      * @param s
      *        the string to decapitalize
      * @return the decapitalized string
+     * @see Introspector#decapitalize(String)
      */
     public static String decapitalize(final String s) {
-        return Character.toLowerCase(s.charAt(0)) + s.substring(1);
+        return Introspector.decapitalize(s);
     }
 
     /**
