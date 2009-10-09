@@ -41,7 +41,6 @@ public class CsvReader {
      *        indicates whether this CsvReader should trim spaces or not
      */
     public CsvReader(final Reader in, final boolean trimSpaces) {
-        super();
         if (in instanceof BufferedReader) {
             this.in = (BufferedReader) in;
         } else {
