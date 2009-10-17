@@ -20,11 +20,12 @@ package com.acuityph.commons.jpa;
 import static java.text.MessageFormat.format;
 
 import java.lang.reflect.Field;
-import java.util.Locale;
 
 import javax.persistence.Id;
 
 import org.springframework.util.Assert;
+
+import com.acuityph.commons.util.StringUtility;
 
 /**
  * Provides a set of static utility methods for JPA.
@@ -58,7 +59,7 @@ public final class JpaUtils {
      */
     public static String constructSelectAllQuery(final String entityName) {
         Assert.hasText(entityName, "Invalid entity name \"" + entityName + "\"!");
-        return format(SELECT_ALL_FORMAT, entityName, entityName.toLowerCase(Locale.ENGLISH));
+        return format(SELECT_ALL_FORMAT, entityName, StringUtility.decapitalize(entityName));
     }
 
     /**
