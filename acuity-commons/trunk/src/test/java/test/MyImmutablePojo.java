@@ -31,7 +31,6 @@ public class MyImmutablePojo {
      *        the name
      */
     public MyImmutablePojo(final String name) {
-        super();
         this.name = name;
     }
 

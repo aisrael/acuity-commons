@@ -39,7 +39,6 @@ public class NamedParameter<T> {
      *        the parameter type
      */
     public NamedParameter(final String name, final Class<T> type) {
-        super();
         this.name = name;
         this.type = type;
     }

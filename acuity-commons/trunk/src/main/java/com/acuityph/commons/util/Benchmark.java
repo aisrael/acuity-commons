@@ -76,7 +76,7 @@ public class Benchmark extends StopWatch {
      * {@link StopWatch}.
      */
     public Benchmark() {
-        super();
+        // noop
     }
 
     /**

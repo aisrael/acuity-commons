@@ -66,7 +66,6 @@ public class EntityInspector<T> {
      *        the entity class to inspect
      */
     public EntityInspector(final Class<T> entityClass) {
-        super();
         this.entityClass = entityClass;
         idField = JpaUtils.determineIdField(entityClass);
         if (idField != null) {

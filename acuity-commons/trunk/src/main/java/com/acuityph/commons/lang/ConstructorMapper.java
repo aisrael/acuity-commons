@@ -67,7 +67,6 @@ public class ConstructorMapper<S, T> extends Mapper.Base<S, T> {
          *        the class of type &lt;T&gt;
          */
         protected Builder(final Class<S> sourceClass, final Class<T> targetClass) {
-            super();
             this.targetClass = targetClass;
             beanWrapper = new BeanWrapperImpl(sourceClass);
         }
@@ -120,7 +119,6 @@ public class ConstructorMapper<S, T> extends Mapper.Base<S, T> {
              *        the class of type &lt;T&gt;
              */
             private ToFrom(final Class<T> targetClass) {
-                super();
                 this.targetClass = targetClass;
             }
 

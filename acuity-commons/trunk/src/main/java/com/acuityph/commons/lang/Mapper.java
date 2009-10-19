@@ -59,7 +59,6 @@ public interface Mapper<S, T> {
          *        the target class
          */
         protected Base(final Class<T> targetClass) {
-            super();
             this.targetClass = targetClass;
         }
 

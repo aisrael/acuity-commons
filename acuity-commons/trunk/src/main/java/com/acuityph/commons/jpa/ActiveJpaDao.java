@@ -70,7 +70,6 @@ public class ActiveJpaDao<K, E> extends JpaDaoSupport implements Dao<K, E> {
      *        the entity class
      */
     public ActiveJpaDao(final Class<E> entityClass) {
-        super();
         this.entityInspector = EntityInspector.inspect(entityClass);
         final String entityName = ClassUtils.getShortName(entityClass);
         if (entityInspector.hasNamedQuery(entityName + ".findAll")
