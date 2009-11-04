@@ -117,7 +117,7 @@ public final class StringUtility {
         final byte[] bytes = new byte[length / 2];
         for (int i = 0; i < length;) {
             final String hex = string.substring(i, i + 2);
-            bytes[i / 2] = (byte) (Integer.parseInt(hex, HEX));
+            bytes[i / 2] = (byte) Integer.parseInt(hex, HEX);
             i += 2;
         }
 
@@ -250,6 +250,17 @@ public final class StringUtility {
             words[i] = words[i].toLowerCase(locale);
         }
         return join(words, '_');
+    }
+
+    /**
+     * Join a variable argument list using commas.
+     *
+     * @param args
+     *            the objects
+     * @return The joined String
+     */
+    public static String join(final Object... args) {
+        return join(",", args);
     }
 
     /**
