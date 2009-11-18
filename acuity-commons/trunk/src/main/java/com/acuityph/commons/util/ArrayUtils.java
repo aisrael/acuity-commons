@@ -36,9 +36,9 @@ public final class ArrayUtils {
 
     /**
      * @param <T>
-     *        a type
+     *            a type
      * @param array
-     *        an array
+     *            an array
      * @return true if the given array is not null and has at least one element
      */
     public static <T> boolean hasElements(final T[] array) {
@@ -47,9 +47,9 @@ public final class ArrayUtils {
 
     /**
      * @param <T>
-     *        a type
+     *            a type
      * @param array
-     *        an array
+     *            an array
      * @return true if the given array is null or is empty
      */
     public static <T> boolean isNullOrEmpty(final T[] array) {
@@ -58,7 +58,7 @@ public final class ArrayUtils {
 
     /**
      * @param array
-     *        char[]
+     *            char[]
      * @return Character[]
      */
     public static Character[] box(final char[] array) {
@@ -72,7 +72,7 @@ public final class ArrayUtils {
 
     /**
      * @param array
-     *        int[]
+     *            int[]
      * @return Integer[]
      */
     public static Integer[] box(final int[] array) {
@@ -86,7 +86,7 @@ public final class ArrayUtils {
 
     /**
      * @param array
-     *        Integer[]
+     *            Integer[]
      * @return int[]
      */
     public static int[] unbox(final Integer[] array) {
@@ -100,7 +100,7 @@ public final class ArrayUtils {
 
     /**
      * @param array
-     *        array of <code>char</code>
+     *            array of <code>char</code>
      * @return {@link List}&lt;{@link Character}&gt;
      */
     public static List<Character> asList(final char[] array) {
@@ -113,7 +113,7 @@ public final class ArrayUtils {
 
     /**
      * @param array
-     *        array of <code>int</code>
+     *            array of <code>int</code>
      * @return {@link List}&lt;{@link Integer}&gt;
      */
     public static List<Integer> asList(final int[] array) {
@@ -123,4 +123,26 @@ public final class ArrayUtils {
         }
         return list;
     }
+
+    /**
+     * Returns the array containing only non-<tt>null</tt> elements from its
+     * arguments.
+     *
+     * @param <T>
+     *            a type (can be Object)
+     * @param args
+     *            the arguments (varargs)
+     * @return the array containing only non-<tt>null</tt> elements.
+     */
+    @SuppressWarnings("unchecked")
+    public static <T> T[] compact(final T... args) {
+        final List<T> results = new ArrayList<T>();
+        for (final T obj : args) {
+            if (obj != null) {
+                results.add(obj);
+            }
+        }
+        return (T[]) results.toArray();
+    }
+
 }
