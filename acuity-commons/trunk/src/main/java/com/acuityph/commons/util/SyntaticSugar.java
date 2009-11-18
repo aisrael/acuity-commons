@@ -36,11 +36,11 @@ public final class SyntaticSugar {
      * Returns obj if obj is not null, or val.
      *
      * @param <T>
-     *        a type
+     *            a type
      * @param obj
-     *        the object to test
+     *            the object to test
      * @param valIfNull
-     *        the value to return if obj is null
+     *            the value to return if obj is null
      * @return val if obj is null, or obj
      */
     public static <T> T ifNull(final T obj, final T valIfNull) {
@@ -51,16 +51,17 @@ public final class SyntaticSugar {
      * Returns obj if obj is not null, or val.
      *
      * @param <T>
-     *        a type
+     *            a type
      * @param obj
-     *        the object to test
+     *            the object to test
      * @param valIfNull
-     *        the value to return if obj is null
+     *            the value to return if obj is null
      * @param valIfNotNull
-     *        the value to return if obj is not null
+     *            the value to return if obj is not null
      * @return valIfNull if obj is null, or valIfNotNull
      */
-    public static <T> T ifNull(final T obj, final T valIfNull, final T valIfNotNull) {
+    public static <T> T ifNull(final T obj, final T valIfNull,
+            final T valIfNotNull) {
         if (obj == null) {
             return valIfNull;
         }
@@ -71,9 +72,9 @@ public final class SyntaticSugar {
      * Returns the first non-null expression among its arguments.
      *
      * @param <T>
-     *        a type (can be Object)
+     *            a type (can be Object)
      * @param args
-     *        the arguments (varargs)
+     *            the arguments (varargs)
      * @return the first non-null expression among the arguments, or null if all
      *         are null
      */
