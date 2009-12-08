@@ -5,7 +5,7 @@
   <artifactId>acuity-commons</artifactId>
   <packaging>jar</packaging>
   <name>Acuity Commons Library</name>
-  <version>0.5.2-SNAPSHOT</version>
+  <version>0.5.2</version>
 
   <url>http://www.acuityph.com</url>
 
@@ -18,9 +18,9 @@
 
   <!-- SVN Configuration -->
   <scm>
-    <connection>scm:svn:http://acuity-commons.googlecode.com/svn/acuity-commons/trunk</connection>
-    <developerConnection>scm:svn:https://acuity-commons.googlecode.com/svn/acuity-commons/trunk</developerConnection>
-    <url>http://code.google.com/p/acuity-commons/source/browse/acuity-commons/trunk</url>
+    <connection>scm:svn:http://acuity-commons.googlecode.com/svn/acuity-commons/tags/acuity-commons-0.5.2</connection>
+    <developerConnection>scm:svn:https://acuity-commons.googlecode.com/svn/acuity-commons/tags/acuity-commons-0.5.2</developerConnection>
+    <url>http://code.google.com/p/acuity-commons/source/browse/acuity-commons/tags/acuity-commons-0.5.2</url>
   </scm>
 
   <properties>
