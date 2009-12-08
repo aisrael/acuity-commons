@@ -33,11 +33,11 @@ public final class BigNumberUtils {
     }
 
     /**
-     * @param bigDecimal
-     *            a BigDecimal
+     * @param number
+     *            a BigDecimal number
      * @return true if <code>bigDecimal</code> is not null and non-zero
      */
-    public static boolean isNotNullOrZero(final BigDecimal bigDecimal) {
-        return bigDecimal != null && !BigDecimal.ZERO.equals(bigDecimal);
+    public static boolean isNotNullOrZero(final BigDecimal number) {
+        return number != null && !BigDecimal.ZERO.equals(number);
     }
 }
