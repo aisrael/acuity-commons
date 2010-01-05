@@ -106,6 +106,9 @@
             <property name="severity" value="error"/>
             <property name="headerFile" value="${config_loc}/header.txt"/>
         </module>
+        <module name="StringLiteralEquality">
+            <property name="severity" value="error"/>
+        </module>
     </module>
     <module name="SuppressionCommentFilter"/>
 </module>
