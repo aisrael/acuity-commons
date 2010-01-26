@@ -55,6 +55,13 @@ public final class SystemUtils {
     public static final String USER_DIR = System.getProperty("user.dir");
 
     /**
+     * Utility classes should not have a public or default constructor.
+     */
+    private SystemUtils() {
+        // noop
+    }
+
+    /**
      * @return {@link #OS_NAME}.startsWith("Windows")
      * @deprecated
      * @see Platform#isWindows()
@@ -62,12 +69,5 @@ public final class SystemUtils {
     @Deprecated
     public static boolean isOsWindows() {
         return Platform.isWindows();
-    }
-
-    /**
-     * Utility classes should not have a public or default constructor.
-     */
-    private SystemUtils() {
-        // noop
     }
 }
