@@ -4,12 +4,13 @@
   <artifactId>acuity-commons</artifactId>
   <version>0.5</version>
   <versioning>
-    <release>0.5.2</release>
+    <release>0.5.3</release>
     <versions>
       <version>0.5</version>
       <version>0.5.1</version>
       <version>0.5.2</version>
+      <version>0.5.3</version>
     </versions>
-    <lastUpdated>20091208084354</lastUpdated>
+    <lastUpdated>20100126074406</lastUpdated>
   </versioning>
 </metadata>
