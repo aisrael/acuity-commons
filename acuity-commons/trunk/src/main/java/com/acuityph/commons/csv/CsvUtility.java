@@ -18,6 +18,7 @@
 package com.acuityph.commons.csv;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Alistair A. Israel
@@ -36,7 +37,7 @@ public final class CsvUtility {
      * Parses a single line (String) of comma-separated values.
      *
      * @param line
-     *        The CSV line of text
+     *            The CSV line of text
      * @return An array of Strings
      */
     public static String[] parse(final String line) {
@@ -47,12 +48,27 @@ public final class CsvUtility {
      * Parses a single line (String) of comma-separated values.
      *
      * @param line
-     *        The CSV line of text
+     *            The CSV line of text
      * @param trimSpaces
-     *        whether to trim any leading/trailing spaces
+     *            whether to trim any leading/trailing spaces
      * @return An array of Strings
      */
     public static String[] parse(final String line, final boolean trimSpaces) {
+        final List<String> list = toList(line, trimSpaces);
+        return list.toArray(new String[list.size()]);
+    }
+
+    /**
+     * Parses a single line (String) of comma-separated values to a {@link List}
+     * .
+     *
+     * @param line
+     *            The CSV line of text
+     * @param trimSpaces
+     *            whether to trim any leading/trailing spaces
+     * @return a {@link List} of Strings.
+     */
+    public static List<String> toList(final String line, final boolean trimSpaces) {
         final ArrayList<String> results = new ArrayList<String>();
 
         int i = 0;
@@ -74,14 +90,14 @@ public final class CsvUtility {
             results.add(s);
         }
 
-        return results.toArray(new String[results.size()]);
+        return results;
     }
 
     /**
      * @param sb
-     *        the {@link StringBuilder}
+     *            the {@link StringBuilder}
      * @param trimSpaces
-     *        true if we should trim spaces from the string we're building
+     *            true if we should trim spaces from the string we're building
      * @return sb.toString(), trimmed if trimSpaces is true
      */
     private static String trimIfNeeded(final StringBuilder sb, final boolean trimSpaces) {
