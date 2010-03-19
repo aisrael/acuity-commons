@@ -22,12 +22,14 @@ import static org.mockito.Mockito.verify;
 import junit.framework.Assert;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.springframework.orm.jpa.JpaTemplate;
 
+import dirty.mockito.junit.rules.MagicMocker;
+
 import test.MyEntity;
-import dirty.mockito.MagicMocker;
 
 /**
  * JUnit test for {@link ActiveJpaDao}.
@@ -35,7 +37,12 @@ import dirty.mockito.MagicMocker;
  * @author Alistair A. Israel
  * @since 0.3.1
  */
-public final class ActiveJpaDaoTest extends MagicMocker {
+public final class ActiveJpaDaoTest {
+
+    // CHECKSTYLE:OFF
+    @Rule
+    public final MagicMocker magicMocker = new MagicMocker();
+    // CHECKSTYLE:ON
 
     @Mock
     private JpaTemplate jpaTemplate;
