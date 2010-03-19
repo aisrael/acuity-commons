@@ -13,13 +13,6 @@
         <module name="FileContentsHolder"/>
         <module name="ArrayTypeStyle"/>
         <module name="FinalParameters"/>
-        <module name="GenericIllegalRegexp">
-            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Line has trailing spaces"/>
-            <metadata name="com.atlassw.tools.eclipse.checkstyle.lastEnabledSeverity" value="info"/>
-            <property name="severity" value="info"/>
-            <property name="format" value="[^*]\s+$"/>
-            <property name="message" value="Line has trailing spaces."/>
-        </module>
         <module name="ModifierOrder"/>
         <module name="RedundantModifier"/>
         <module name="UpperEll"/>
@@ -78,7 +71,6 @@
         <module name="ParameterName"/>
         <module name="StaticVariableName"/>
         <module name="TypeName"/>
-        <module name="FileLength"/>
         <module name="LineLength">
             <property name="max" value="140"/>
         </module>
@@ -91,7 +83,6 @@
         <module name="NoWhitespaceBefore"/>
         <module name="OperatorWrap"/>
         <module name="ParenPad"/>
-        <module name="TabCharacter"/>
         <module name="WhitespaceAfter"/>
         <module name="WhitespaceAround">
             <property name="tokens" value="ASSIGN,BAND,BAND_ASSIGN,BOR,BOR_ASSIGN,BSR,BSR_ASSIGN,BXOR,BXOR_ASSIGN,COLON,DIV,DIV_ASSIGN,EQUAL,GE,GT,LAND,LCURLY,LE,LITERAL_ASSERT,LITERAL_CATCH,LITERAL_DO,LITERAL_ELSE,LITERAL_FINALLY,LITERAL_FOR,LITERAL_IF,LITERAL_RETURN,LITERAL_SYNCHRONIZED,LITERAL_TRY,LITERAL_WHILE,LOR,LT,MINUS,MINUS_ASSIGN,MOD,MOD_ASSIGN,NOT_EQUAL,PLUS,PLUS_ASSIGN,QUESTION,RCURLY,SL,SLIST,SL_ASSIGN,SR,SR_ASSIGN,STAR,STAR_ASSIGN,LITERAL_ASSERT,TYPE_EXTENSION_AND"/>
@@ -102,10 +93,6 @@
         <module name="CyclomaticComplexity"/>
         <module name="NPathComplexity"/>
         <module name="BooleanExpressionComplexity"/>
-        <module name="RegexpHeader">
-            <property name="severity" value="error"/>
-            <property name="headerFile" value="${config_loc}/header.txt"/>
-        </module>
         <module name="StringLiteralEquality">
             <property name="severity" value="error"/>
         </module>
