@@ -111,6 +111,7 @@
           <consoleOutput>true</consoleOutput>
           <propertyExpansion>config_loc=${project.basedir}/etc</propertyExpansion>
           <failsOnError>true</failsOnError>
+          <includeTestSourceDirectory>true</includeTestSourceDirectory>
         </configuration>
         <executions>
           <execution>
