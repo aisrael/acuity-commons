@@ -52,7 +52,7 @@ public final class ActiveJpaDaoTest {
      *
      * @author Alistair A. Israel
      */
-    public class MyEntityJpaDao extends ActiveJpaDao<Integer, MyEntity> {
+    public static class MyEntityJpaDao extends ActiveJpaDao<Integer, MyEntity> {
 
         /**
          *
