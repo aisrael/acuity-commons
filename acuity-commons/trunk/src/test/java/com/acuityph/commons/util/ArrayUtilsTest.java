@@ -65,7 +65,6 @@ public final class ArrayUtilsTest {
         final Character[] boxed = ArrayUtils.box(array);
         for (int i = 0; i < array.length; ++i) {
             final Character element = boxed[i];
-            assertTrue(element instanceof Character);
             assertEquals(array[i], element.charValue());
         }
     }
@@ -79,7 +78,6 @@ public final class ArrayUtilsTest {
         final Integer[] boxed = ArrayUtils.box(array);
         for (int i = 0; i < array.length; ++i) {
             final Integer element = boxed[i];
-            assertTrue(element instanceof Integer);
             assertEquals(array[i], element.intValue());
         }
     }
@@ -105,7 +103,6 @@ public final class ArrayUtilsTest {
         final List<Character> list = ArrayUtils.asList(array);
         for (int i = 0; i < array.length; ++i) {
             final Character element = list.get(i);
-            assertTrue(element instanceof Character);
             assertEquals(array[i], element.charValue());
         }
     }
@@ -119,7 +116,6 @@ public final class ArrayUtilsTest {
         final List<Integer> list = ArrayUtils.asList(array);
         for (int i = 0; i < array.length; ++i) {
             final Integer element = list.get(i);
-            assertTrue(element instanceof Integer);
             assertEquals(array[i], element.intValue());
         }
     }
