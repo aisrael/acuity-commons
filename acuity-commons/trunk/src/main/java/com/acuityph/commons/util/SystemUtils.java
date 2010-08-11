@@ -37,6 +37,13 @@ public final class SystemUtils {
     public static final String FILE_SEPARATOR = System.getProperty("file.separator");
 
     /**
+     * Line separator or newline character sequence, as reported by the
+     * <code>"line.separator"</code> system property (<code>"\n"</code> on
+     * UNIX).
+     */
+    public static final String NEWLINE = System.getProperty("line.separator");
+
+    /**
      * Directory for temporary files, as reported by the
      * <code>"java.io.tmpdir"</code> system property.
      */
