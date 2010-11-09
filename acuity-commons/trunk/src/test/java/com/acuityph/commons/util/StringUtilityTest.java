@@ -173,9 +173,8 @@ public final class StringUtilityTest {
      * Test for {@link StringUtility#join(Collection, char)}.
      */
     @Test
-    @SuppressWarnings("unchecked")
     public void testJoinCollectionChar() {
-        final Collection[] collections =
+        final Collection<?>[] collections =
                 { Arrays.asList(new String[] { "camel", "case" }),
                         Arrays.asList(new String[] { "Lorem", "ipsum", "dolor" }), };
         final char[] separators = { '_', ',' };
