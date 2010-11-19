@@ -82,7 +82,7 @@ public class EntityInspector<T> {
     private void inspectNamedQueries() {
         final Entity entityAnnotation = entityClass.getAnnotation(Entity.class);
         if (entityAnnotation == null) {
-            log.warn(format("Class<{0}> not annotated with @MyEntity!", entityClass));
+            log.warn(format("Class<{0}> not annotated with @Entity!", entityClass));
         }
         final NamedQueries nqs = entityClass.getAnnotation(NamedQueries.class);
         if (nqs != null && nqs.value().length > 0) {
