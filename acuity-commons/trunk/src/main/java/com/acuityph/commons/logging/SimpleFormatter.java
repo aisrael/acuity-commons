@@ -22,7 +22,7 @@ import static org.springframework.util.ClassUtils.getShortName;
 import java.text.DateFormat;
 import java.util.Collections;
 import java.util.Date;
-import java.util.Hashtable;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Formatter;
 import java.util.logging.Level;
@@ -38,7 +38,7 @@ public class SimpleFormatter extends Formatter {
 
     private static final Map<Level, String> LEVELS_MAP;
     static {
-        final Map<Level, String> map = new Hashtable<Level, String>(7);
+        final Map<Level, String> map = new HashMap<Level, String>(7);
         map.put(Level.CONFIG, "[CONFIG] ");
         map.put(Level.FINE, "[FINE] ");
         map.put(Level.FINER, "[FINER] ");

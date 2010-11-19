@@ -22,7 +22,7 @@ import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Hashtable;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -92,7 +92,7 @@ public class DatabaseMetaDataHelper extends MetaDataHelper {
     }
 
     private final Map<String, TableMetaDataHelper> tableMap =
-            new Hashtable<String, TableMetaDataHelper>();
+            new HashMap<String, TableMetaDataHelper>();
 
     /**
      * @param tableName

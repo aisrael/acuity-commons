@@ -18,7 +18,7 @@
 package com.acuityph.commons.jdbc;
 
 import java.sql.Types;
-import java.util.Hashtable;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
@@ -287,7 +287,7 @@ public enum SqlType {
 
     // Create the lookup map from native integer Type to SqlType
     private static final Map<Integer, SqlType> LOOKUP_MAP =
-            new Hashtable<Integer, SqlType>(values().length);
+            new HashMap<Integer, SqlType>(values().length);
     static {
         for (final SqlType sqlType : values()) {
             if (LOOKUP_MAP.containsKey(sqlType.value)) {

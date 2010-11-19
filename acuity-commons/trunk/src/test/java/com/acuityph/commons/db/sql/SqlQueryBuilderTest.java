@@ -17,7 +17,7 @@
  */
 package com.acuityph.commons.db.sql;
 
-import java.util.Hashtable;
+import java.util.HashMap;
 import java.util.Map;
 
 import junit.framework.TestCase;
@@ -52,7 +52,7 @@ public final class SqlQueryBuilderTest extends TestCase {
      * Test for {@link SqlQueryBuilder#update(String)}.
      */
     public void testUpdate() {
-        final Map<Object, Object> map = new Hashtable<Object, Object>();
+        final Map<Object, Object> map = new HashMap<Object, Object>();
         map.put("password", "?");
         final SqlQueryBuilder builder = SqlQueryBuilder.update(TABLE).set(map);
         final String sql = builder.build();

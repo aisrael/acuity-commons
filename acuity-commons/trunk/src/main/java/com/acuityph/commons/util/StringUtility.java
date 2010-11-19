@@ -20,7 +20,7 @@ package com.acuityph.commons.util;
 import java.beans.Introspector;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Hashtable;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Locale;
 import java.util.Map;
@@ -376,7 +376,7 @@ public final class StringUtility {
     private static final Pattern SPECIAL_CHARACTERS_PATTERN =
             Pattern.compile("(\n|\t|\b|\f|\r|\"|\'|\\\\)");
 
-    private static final Map<String, String> ESCAPE_MAP = new Hashtable<String, String>();
+    private static final Map<String, String> ESCAPE_MAP = new HashMap<String, String>();
     static {
         ESCAPE_MAP.put("\n", "\\\\n");
         ESCAPE_MAP.put("\t", "\\\\t");
@@ -409,7 +409,7 @@ public final class StringUtility {
     private static final Pattern ESCAPE_SEQUENCES_PATTERN =
             Pattern.compile("(\\\\n|\\\\t|\\\\b|\\\\f|\\\\r|\\\\\"|\\\\\'|\\\\\\\\)");
 
-    private static final Map<String, String> UNESCAPE_MAP = new Hashtable<String, String>();
+    private static final Map<String, String> UNESCAPE_MAP = new HashMap<String, String>();
     static {
         UNESCAPE_MAP.put("\\n", "\n");
         UNESCAPE_MAP.put("\\t", "\t");

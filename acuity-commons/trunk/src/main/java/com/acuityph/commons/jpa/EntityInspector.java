@@ -20,7 +20,7 @@ package com.acuityph.commons.jpa;
 import static java.text.MessageFormat.format;
 
 import java.lang.reflect.Field;
-import java.util.Hashtable;
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.persistence.Entity;
@@ -44,7 +44,7 @@ public class EntityInspector<T> {
 
     private final Class<T> entityClass;
 
-    private final Map<String, NamedQuery> namedQueries = new Hashtable<String, NamedQuery>();
+    private final Map<String, NamedQuery> namedQueries = new HashMap<String, NamedQuery>();
 
     private final Field idField;
 
