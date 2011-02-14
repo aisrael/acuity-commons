@@ -17,7 +17,7 @@
  */
 package com.acuityph.commons.jdbc;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.sql.Types;
 

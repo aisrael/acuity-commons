@@ -27,9 +27,8 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.springframework.orm.jpa.JpaTemplate;
 
-import dirty.mockito.junit.rules.MagicMocker;
-
 import test.MyEntity;
+import dirty.mockito.junit.rules.MagicMocker;
 
 /**
  * JUnit test for {@link ActiveJpaDao}.
