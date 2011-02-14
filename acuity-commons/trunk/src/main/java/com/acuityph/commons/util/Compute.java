@@ -17,7 +17,7 @@
  */
 package com.acuityph.commons.util;
 
-import org.springframework.util.ObjectUtils;
+import java.util.Arrays;
 
 /**
  * <p>
@@ -36,21 +36,36 @@ import org.springframework.util.ObjectUtils;
 public final class Compute {
 
     /**
-     * Utility classes should not have a public or default constructor.
+     *
      */
     private Compute() {
-        // noop
+        // Utility classes should not have a public or default constructor.
     }
 
     /**
-     * Merely a delegate to {@link ObjectUtils#nullSafeHashCode(Object[])}.
+     * Acts like Spring's {@code ObjectUtils.nullSafeHashCode()} Delegates to
+     * {@link Arrays#hashCode(Object[])} if more than one argument is provided.
      *
      * @param args
      *        the fields to include in hashcode computation
      * @return the hashcode
-     * @see ObjectUtils#nullSafeHashCode(Object[])
+     * @see Arrays#hashCode(Object[])
      */
     public static int hashCode(final Object... args) {
-        return ObjectUtils.nullSafeHashCode(args);
+        if (args == null || args.length == 0) {
+            return 0;
+        }
+        if (args.length == 1) {
+            final Object obj = args[0];
+            if (obj == null) {
+                return 0;
+            }
+            if (obj.getClass().isArray()) {
+                return Arrays.hashCode((Object[]) obj);
+            } else {
+                return obj.hashCode();
+            }
+        }
+        return Arrays.hashCode(args);
     }
 }
