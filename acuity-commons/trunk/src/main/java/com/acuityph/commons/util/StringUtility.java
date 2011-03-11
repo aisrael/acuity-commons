@@ -256,7 +256,7 @@ public final class StringUtility {
      * Join a variable argument list using commas.
      *
      * @param args
-     *            the objects
+     *        the objects
      * @return The joined String
      */
     public static String join(final Object... args) {
@@ -373,8 +373,8 @@ public final class StringUtility {
         return sb.toString();
     }
 
-    private static final Pattern SPECIAL_CHARACTERS_PATTERN =
-            Pattern.compile("(\n|\t|\b|\f|\r|\"|\'|\\\\)");
+    private static final Pattern SPECIAL_CHARACTERS_PATTERN = Pattern
+            .compile("(\n|\t|\b|\f|\r|\"|\'|\\\\)");
 
     private static final Map<String, String> ESCAPE_MAP = new HashMap<String, String>();
     static {
@@ -406,8 +406,8 @@ public final class StringUtility {
         return sb.toString();
     }
 
-    private static final Pattern ESCAPE_SEQUENCES_PATTERN =
-            Pattern.compile("(\\\\n|\\\\t|\\\\b|\\\\f|\\\\r|\\\\\"|\\\\\'|\\\\\\\\)");
+    private static final Pattern ESCAPE_SEQUENCES_PATTERN = Pattern
+            .compile("(\\\\n|\\\\t|\\\\b|\\\\f|\\\\r|\\\\\"|\\\\\'|\\\\\\\\)");
 
     private static final Map<String, String> UNESCAPE_MAP = new HashMap<String, String>();
     static {
@@ -455,6 +455,16 @@ public final class StringUtility {
      */
     public static boolean hasLength(final String s) {
         return !isNullOrEmpty(s);
+    }
+
+    /**
+     * @param s
+     *        a string
+     * @return {@code true} if the given string is not {@code null}, and has
+     *         non-whitespace length > 0
+     */
+    public static boolean hasText(final String s) {
+        return s != null && s.trim().length() > 0;
     }
 
     /**
